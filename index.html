@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Barchart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <style>
+    .barContainer {
+      display: grid;
+      grid-template-columns: repeat(41, 1fr);
+      grid-gap: 1px;
+      margin-top: 10vw;
+    }
+    .bar {
+      background-color: black;
+      width: 20px;
+
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="barContainer">
+      <div class="bar" id="bar0"></div>
+      <div class="bar" id="bar1"></div>
+      <div class="bar" id="bar2"></div>
+      <div class="bar" id="bar3"></div>
+      <div class="bar" id="bar4"></div>
+      <div class="bar" id="bar5"></div>
+      <div class="bar" id="bar6"></div>
+      <div class="bar" id="bar7"></div>
+      <div class="bar" id="bar8"></div>
+      <div class="bar" id="bar9"></div>
+      <div class="bar" id="bar10"></div>
+      <div class="bar" id="bar11"></div>
+      <div class="bar" id="bar12"></div>
+      <div class="bar" id="bar13"></div>
+      <div class="bar" id="bar14"></div>
+      <div class="bar" id="bar15"></div>
+      <div class="bar" id="bar16"></div>
+      <div class="bar" id="bar17"></div>
+      <div class="bar" id="bar17"></div>
+      <div class="bar" id="bar18"></div>
+      <div class="bar" id="bar19"></div>
+      <div class="bar" id="bar20"></div>
+      <div class="bar" id="bar21"></div>
+      <div class="bar" id="bar22"></div>
+      <div class="bar" id="bar23"></div>
+      <div class="bar" id="bar24"></div>
+      <div class="bar" id="bar25"></div>
+      <div class="bar" id="bar26"></div>
+      <div class="bar" id="bar27"></div>
+      <div class="bar" id="bar28"></div>
+      <div class="bar" id="bar29"></div>
+      <div class="bar" id="bar30"></div>
+      <div class="bar" id="bar31"></div>
+      <div class="bar" id="bar32"></div>
+      <div class="bar" id="bar33"></div>
+      <div class="bar" id="bar34"></div>
+      <div class="bar" id="bar35"></div>
+      <div class="bar" id="bar36"></div>
+      <div class="bar" id="bar37"></div>
+      <div class="bar" id="bar38"></div>
+      <div class="bar" id="bar39"></div>
+    </div>
+  </body>
+  <script>
+    const newArray = [];
+
+    let counter = 1;
+
+    window.addEventListener("DOMContentLoaded", startUp);
+
+    function startUp() {
+      console.log("START");
+      addToArray();
+    }
+
+    function addToArray() {
+      newArray.unshift(heightRandom());
+      counter++;
+      if (counter < 40) {
+        setTimeout(addToArray, 500);
+        setBars();
+      } else {
+        setTimeout(addToArray, 500);
+
+        newArray.splice(40);
+
+        setBars();
+      }
+    }
+
+    function heightRandom() {
+      let barHeight;
+      barHeight = Math.random() * 100;
+      return barHeight + "px";
+    }
+    function setBars() {
+      console.log(newArray);
+      document.getElementById("bar0").style.height = newArray[0];
+      document.getElementById("bar1").style.height = newArray[1];
+      document.getElementById("bar2").style.height = newArray[2];
+      document.getElementById("bar3").style.height = newArray[3];
+      document.getElementById("bar4").style.height = newArray[4];
+      document.getElementById("bar5").style.height = newArray[5];
+      document.getElementById("bar6").style.height = newArray[6];
+      document.getElementById("bar7").style.height = newArray[7];
+      document.getElementById("bar8").style.height = newArray[8];
+      document.getElementById("bar9").style.height = newArray[9];
+      document.getElementById("bar10").style.height = newArray[10];
+      document.getElementById("bar11").style.height = newArray[11];
+      document.getElementById("bar12").style.height = newArray[12];
+      document.getElementById("bar13").style.height = newArray[13];
+      document.getElementById("bar14").style.height = newArray[14];
+      document.getElementById("bar15").style.height = newArray[15];
+      document.getElementById("bar16").style.height = newArray[16];
+      document.getElementById("bar17").style.height = newArray[17];
+      document.getElementById("bar18").style.height = newArray[18];
+      document.getElementById("bar19").style.height = newArray[19];
+      document.getElementById("bar20").style.height = newArray[20];
+      document.getElementById("bar21").style.height = newArray[21];
+      document.getElementById("bar22").style.height = newArray[22];
+      document.getElementById("bar23").style.height = newArray[23];
+      document.getElementById("bar24").style.height = newArray[24];
+      document.getElementById("bar25").style.height = newArray[25];
+      document.getElementById("bar26").style.height = newArray[26];
+      document.getElementById("bar27").style.height = newArray[27];
+      document.getElementById("bar28").style.height = newArray[28];
+      document.getElementById("bar29").style.height = newArray[29];
+      document.getElementById("bar30").style.height = newArray[30];
+      document.getElementById("bar31").style.height = newArray[31];
+      document.getElementById("bar32").style.height = newArray[32];
+      document.getElementById("bar33").style.height = newArray[33];
+      document.getElementById("bar34").style.height = newArray[34];
+      document.getElementById("bar35").style.height = newArray[35];
+      document.getElementById("bar36").style.height = newArray[36];
+      document.getElementById("bar37").style.height = newArray[37];
+      document.getElementById("bar38").style.height = newArray[38];
+      document.getElementById("bar39").style.height = newArray[39];
+    }
+  </script>
+</html>
